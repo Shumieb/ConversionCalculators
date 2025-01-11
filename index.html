@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversion Calculator</title>
+</head>
+
+<body>
+
+    <!----------------------------------------Navbar--------------------------------------->
+    <header>
+        <nav>
+            <h2> <a href="/">Conversion Calculator</a></h2>
+            <div>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!----------------------------------------Navbar--------------------------------------->
+
+    <!----------------------------------------main content--------------------------------------->
+    <main>
+        <h1 class="page-header">Conversion Calculators</h1>
+
+        <!-----------------------------------Length Conversion--------------------------------------->
+        <section class="length-section">
+            <div class="length-heading">
+                <h2>Length Conversions</h2>
+            </div>
+            <div class="length-main">
+                <div class="length-from">
+                    <p>From: </p>
+                    <input type="number" name="fromLength" id="fromLength" min="0">
+                    <select name="lengthFrom" id="lengthFrom">
+                        <option value="km" selected>Kilometer</option>
+                        <option value="m">Meter</option>
+                        <option value="cm">Centimenter</option>
+                        <option value="mm">Milimenter</option>
+                    </select>
+                </div>
+                <div class="length-to">
+                    <p>To:</p>
+                    <input type="number" name="toLength" id="toLength" min="0">
+                    <select name="lengthTo" id="lengthTo">
+                        <option value="km">Kilometer</option>
+                        <option value="m" selected>Meter</option>
+                        <option value="cm">Centimenter</option>
+                        <option value="mm">Milimenter</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <!-----------------------------------Length Conversion--------------------------------------->
+
+        <!-----------------------------------Temperature Conversion--------------------------------------->
+        <section class="temp-section">
+            <div class="temp-heading">
+                <h2>Temperature Conversions</h2>
+            </div>
+            <div class="temp-main">
+                <div class="temp-from">
+                    <p>From: </p>
+                    <input type="number" name="fromTemp" id="fromTemp" min="0">
+                    <select name="tempFrom" id="tempFrom">
+                        <option value="celsius" selected>Celsius</option>
+                        <option value="kelvin">Kelvin</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                    </select>
+                </div>
+                <div class="temp-to">
+                    <p>To:</p>
+                    <input type="number" name="toTemp" id="toTemp" min="0">
+                    <select name="tempTo" id="tempTo">
+                        <option value="celsius">Celsius</option>
+                        <option value="kelvin" selected>Kelvin</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <!-----------------------------------Temperature Conversion--------------------------------------->
+
+        <!-----------------------------------Weight Conversion--------------------------------------->
+        <section class="weight-section">
+            <div class="weight-heading">
+                <h2>Weight Conversions</h2>
+            </div>
+            <div class="weight-main">
+                <div class="weight-from">
+                    <p>From: </p>
+                    <input type="number" name="fromWeight" id="fromWeight" min="0">
+                    <select name="weightFrom" id="weightFrom">
+                        <option value="kilogram" selected>Kilogram</option>
+                        <option value="gram">Gram</option>
+                        <option value="miligram">Miligram</option>
+                        <option value="pound">Pound</option>
+                        <option value="ounce">Ounce</option>
+                    </select>
+                </div>
+                <div class="weight-to">
+                    <p>To:</p>
+                    <input type="number" name="toWeight" id="toWeight" min="0">
+                    <select name="weightTo" id="weightTo">
+                        <option value="kilogram">Kilogram</option>
+                        <option value="gram" selected>Gram</option>
+                        <option value="miligram">Miligram</option>
+                        <option value="pound">Pound</option>
+                        <option value="ounce">Ounce</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <!-----------------------------------Weight Conversion--------------------------------------->
+
+    </main>
+    <!----------------------------------------main content--------------------------------------->
+
+    <!----------------------------------------footer--------------------------------------->
+    <footer>
+        <div>
+            <p>&copy; 2025</p>
+            <p>Created by Shumie</p>
+        </div>
+    </footer>
+    <!----------------------------------------footer--------------------------------------->
+
+    <script src="main.js"></script>
+</body>
+
+</html>
