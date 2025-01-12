@@ -41,11 +41,24 @@ document.getElementById('toLength').addEventListener('change', function () {
 
 document.getElementById('lengthFrom').addEventListener('change', function () {
     lengthSelect_One_Value = this.value;
+
+    // reset results
+    if (lengthInput_Two_Value > 0) {
+        lengthInput_Two_Value = null;
+        lengthInput_Two.value = lengthInput_Two_Value;
+    }
+
     //console.log(lengthSelect_One_Value);
 });
 
 document.getElementById('lengthTo').addEventListener('change', function () {
     lengthSelect_Two_Value = this.value;
+
+    if (lengthInput_Two_Value > 0) {
+        lengthInput_Two_Value = null;
+        lengthInput_Two.value = lengthInput_Two_Value;
+    }
+
     //console.log(lengthSelect_Two_Value);
 });
 
