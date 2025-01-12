@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-----------------styles----------->
     <link rel="stylesheet" href="style.css">
+
+    <!------------google icons-------------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <title>Conversion Calculator</title>
 </head>
 
@@ -38,25 +44,38 @@
                 <h2>Length Conversions</h2>
             </div>
             <div class="length-main">
-                <div class="length-from">
-                    <p>From: </p>
-                    <input type="number" name="fromLength" id="fromLength" min="0">
-                    <select name="lengthFrom" id="lengthFrom">
-                        <option value="km" selected>Kilometer</option>
-                        <option value="m">Meter</option>
-                        <option value="cm">Centimenter</option>
-                        <option value="mm">Milimenter</option>
-                    </select>
-                </div>
-                <div class="length-to">
-                    <p>To:</p>
-                    <input type="number" name="toLength" id="toLength" min="0">
-                    <select name="lengthTo" id="lengthTo">
-                        <option value="km">Kilometer</option>
-                        <option value="m" selected>Meter</option>
-                        <option value="cm">Centimenter</option>
-                        <option value="mm">Milimenter</option>
-                    </select>
+                <div class="selects">
+                    <div class="length-from">
+                        <p>From: </p>
+                        <select name="lengthFrom" id="lengthFrom">
+                            <option value="km" selected>Kilometer</option>
+                            <option value="m">Meter</option>
+                            <option value="cm">Centimenter</option>
+                            <option value="mm">Milimenter</option>
+                        </select>
+                        <div>
+                            <input type="number" name="fromLength" id="fromLength" min="0">
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <button class="btn">
+                            <i class="material-icons">arrow_back</i>
+                            <span class="text">Convert</span>
+                            <i class="material-icons">arrow_forward</i>
+                        </button>
+                    </div>
+                    <div class="length-to">
+                        <p>To: </p>
+                        <select name="lengthTo" id="lengthTo">
+                            <option value="km">Kilometer</option>
+                            <option value="m" selected>Meter</option>
+                            <option value="cm">Centimenter</option>
+                            <option value="mm">Milimenter</option>
+                        </select>
+                        <div>
+                            <input type="number" name="toLength" id="toLength" min="0">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -134,7 +153,8 @@
     </footer>
     <!----------------------------------------footer--------------------------------------->
 
-    <script src="main.js"></script>
+    <script type="module" src="utils.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

@@ -103,10 +103,9 @@ main {
     padding: 2px 0px;
 }
 
-.length-section .length-main,
-.temp-section .temp-main,
-.weight-section .weight-main {
+.length-section .length-main {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     font-size: 22px;
     padding: 2px 0px;
@@ -114,25 +113,47 @@ main {
     margin: auto;
 }
 
-.length-section .length-main .length-from,
-.length-section .length-main .length-to,
-.temp-section .temp-main .temp-from,
-.temp-section .temp-main .temp-to,
-.weight-section .weight-main .weight-from,
-.weight-section .weight-main .weight-to {
+.selects {
     display: flex;
-    justify-items: flex-start;
+    justify-content: space-between;
     align-items: center;
-    padding: 2px 2px 6px 2px;
 }
 
-.length-section .length-main .length-from p,
-.length-section .length-main .length-to p,
-.temp-section .temp-main .temp-from p,
-.temp-section .temp-main .temp-to p,
-.weight-section .weight-main .weight-from p,
-.weight-section .weight-main .weight-to p {
-    margin: 0px 4px;
+.selects p {
+    padding: 0;
+    margin: 0;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons {
+    padding-top: 8px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #023535;
+    padding: 3px 8px;
+    transition: 0.6s ease-in;
+}
+
+.btn .text {
+    margin: 0px 6px;
+}
+
+.btn:hover {
+    color: burlywood;
 }
 
 .length-section .length-main .length-from input,
@@ -141,11 +162,10 @@ main {
 .temp-section .temp-main .temp-to input,
 .weight-section .weight-main .weight-from input,
 .weight-section .weight-main .weight-to input {
-    margin-left: 4px;
     padding: 3px;
     outline: none;
     border: 1px solid #023535;
-    border-radius: 2px;
+    border-radius: 4px;
     font-size: 18px;
     color: #023535;
 }
@@ -156,13 +176,13 @@ main {
 .temp-section .temp-main .temp-to select,
 .weight-section .weight-main .weight-from select,
 .weight-section .weight-main .weight-to select {
-    margin: 0px 4px;
     padding: 3px 6px;
     outline: none;
     border: 1px solid #023535;
-    border-radius: 2px;
+    border-radius: 4px;
     font-size: 18px;
     color: #023535;
+    cursor: pointer;
 }
 
 footer div {
