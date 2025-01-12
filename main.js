@@ -1,7 +1,16 @@
 import {
     KilometersToMeters,
     KilometersToCentimeters,
-    KilometersToMilimeters
+    KilometersToMilimeters,
+    MetersToKilometers,
+    MetersToCentimeters,
+    MetersToMilimeters,
+    CentimetersToKilometers,
+    CentimetersToMeters,
+    CentimetersToMilimeters,
+    MilimetersToKilometers,
+    MilimetersToMeters,
+    MilimetersToCentimeters
 } from "./utils.js"
 
 // references to HTML
@@ -19,6 +28,7 @@ let lengthInput_Two_Value = 0;
 let lengthSelect_One_Value = "km";
 let lengthSelect_Two_Value = "m";
 
+// event listeners for ui changes
 document.getElementById('fromLength').addEventListener('change', function () {
     lengthInput_One_Value = this.value;
     //console.log(lengthInput_One_Value);
@@ -39,6 +49,7 @@ document.getElementById('lengthTo').addEventListener('change', function () {
     //console.log(lengthSelect_Two_Value);
 });
 
+// event listener for length button conversions
 document.getElementById("lengthConvertBtn").addEventListener("click", function () {
 
     // checks if both inputs are greater than 0
@@ -81,9 +92,71 @@ document.getElementById("lengthConvertBtn").addEventListener("click", function (
             }
         }
 
+        if (lengthSelect_One_Value === "m") {
+            switch (lengthSelect_Two_Value) {
+                case "km":
+                    lengthInput_Two_Value = MetersToKilometers(lengthInput_One_Value);
+                    lengthInput_Two.value = lengthInput_Two_Value;
+                    //console.log("m");
+                    break;
+                case "cm":
+                    lengthInput_Two_Value = MetersToCentimeters(lengthInput_One_Value);
+                    lengthInput_Two.value = lengthInput_Two_Value;
+                    //console.log("cm");
+                    break;
+                case "mm":
+                    lengthInput_Two_Value = MetersToMilimeters(lengthInput_One_Value);
+                    lengthInput_Two.value = lengthInput_Two_Value;
+                    //console.log("mm");
+                    break;
+                default:
+                    break;
+            }
+        }
 
+        if (lengthSelect_One_Value === "cm") {
+            switch (lengthSelect_Two_Value) {
+                case "km":
+                    lengthInput_Two_Value = CentimetersToKilometers(lengthInput_One_Value);
+                    lengthInput_Two.value = lengthInput_Two_Value;
+                    //console.log("m");
+                    break;
+                case "m":
+                    lengthInput_Two_Value = CentimetersToMeters(lengthInput_One_Value);
+                    lengthInput_Two.value = lengthInput_Two_Value;
+                    //console.log("cm");
+                    break;
+                case "mm":
+                    lengthInput_Two_Value = CentimetersToMilimeters(lengthInput_One_Value);
+                    lengthInput_Two.value = lengthInput_Two_Value;
+                    //console.log("mm");
+                    break;
+                default:
+                    break;
+            }
+        }
 
-
+        if (lengthSelect_One_Value === "mm") {
+            switch (lengthSelect_Two_Value) {
+                case "km":
+                    lengthInput_Two_Value = MilimetersToKilometers(lengthInput_One_Value);
+                    lengthInput_Two.value = lengthInput_Two_Value;
+                    //console.log("m");
+                    break;
+                case "m":
+                    lengthInput_Two_Value = MilimetersToMeters(lengthInput_One_Value);
+                    lengthInput_Two.value = lengthInput_Two_Value;
+                    //console.log("cm");
+                    break;
+                case "cm":
+                    lengthInput_Two_Value = MilimetersToCentimeters(lengthInput_One_Value);
+                    lengthInput_Two.value = lengthInput_Two_Value;
+                    //console.log("mm");
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 })
 
