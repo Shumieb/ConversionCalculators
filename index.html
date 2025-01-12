@@ -87,23 +87,36 @@
                 <h2>Temperature Conversions</h2>
             </div>
             <div class="temp-main">
-                <div class="temp-from">
-                    <p>From: </p>
-                    <input type="number" name="fromTemp" id="fromTemp" min="0">
-                    <select name="tempFrom" id="tempFrom">
-                        <option value="celsius" selected>Celsius</option>
-                        <option value="kelvin">Kelvin</option>
-                        <option value="fahrenheit">Fahrenheit</option>
-                    </select>
-                </div>
-                <div class="temp-to">
-                    <p>To:</p>
-                    <input type="number" name="toTemp" id="toTemp" min="0">
-                    <select name="tempTo" id="tempTo">
-                        <option value="celsius">Celsius</option>
-                        <option value="kelvin" selected>Kelvin</option>
-                        <option value="fahrenheit">Fahrenheit</option>
-                    </select>
+                <div class="selects">
+                    <div class="temp-from">
+                        <p>From: </p>
+                        <select name="tempFrom" id="tempFrom">
+                            <option value="celsius" selected>Celsius</option>
+                            <option value="kelvin">Kelvin</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                        <div>
+                            <input type="number" name="fromTemp" id="fromTemp" min="0">
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <button class="btn" id="tempConvertBtn">
+                            <i class="material-icons">arrow_back</i>
+                            <span class="text">Convert</span>
+                            <i class="material-icons">arrow_forward</i>
+                        </button>
+                    </div>
+                    <div class="temp-to">
+                        <p>To: </p>
+                        <select name="tempTo" id="tempTo">
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin" selected>Kelvin</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                        <div>
+                            <input type="number" name="toTemp" id="toTemp" min="0" disabled="true">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -10,25 +10,39 @@ import {
     CentimetersToMilimeters,
     MilimetersToKilometers,
     MilimetersToMeters,
-    MilimetersToCentimeters
+    MilimetersToCentimeters,
+    CelsiusToKelvin,
+    CelsiusToFahrenheit,
+    KelvinToCelsius,
+    KelvinToFahrenheit,
+    FahrenheitToCelsius,
+    FahrenheitToKelvin
 } from "./utils.js"
 
 // references to HTML
 const lengthInput_One = document.getElementById("fromLength");
 const lengthInput_Two = document.getElementById("toLength");
-
 const lengthSelect_One = document.getElementById("lengthFrom");
 const lengthSelect_Two = document.getElementById("lengthTo");
+
+const tempInput_One = document.getElementById("fromTemp");
+const tempInput_Two = document.getElementById("toTemp");
+const tempSelect_One = document.getElementById("tempFrom");
+const tempSelect_Two = document.getElementById("tempTo");
 
 
 // global variables
 let lengthInput_One_Value = 0;
 let lengthInput_Two_Value = 0;
-
 let lengthSelect_One_Value = "km";
 let lengthSelect_Two_Value = "m";
 
-// event listeners for ui changes
+let tempInput_One_Value = 0;
+let tempInput_Two_Value = 0;
+let tempSelect_One_Value = "celsius";
+let tempSelect_Two_Value = "kelvin";
+
+// event listeners for length ui changes
 document.getElementById('fromLength').addEventListener('change', function () {
     lengthInput_One_Value = this.value;
     //console.log(lengthInput_One_Value);
@@ -43,7 +57,7 @@ document.getElementById('lengthFrom').addEventListener('change', function () {
     lengthSelect_One_Value = this.value;
 
     // reset results
-    if (lengthInput_Two_Value > 0) {
+    if (lengthInput_Two_Value != null) {
         lengthInput_Two_Value = null;
         lengthInput_Two.value = lengthInput_Two_Value;
     }
@@ -54,12 +68,46 @@ document.getElementById('lengthFrom').addEventListener('change', function () {
 document.getElementById('lengthTo').addEventListener('change', function () {
     lengthSelect_Two_Value = this.value;
 
-    if (lengthInput_Two_Value > 0) {
+    if (lengthInput_Two_Value != null) {
         lengthInput_Two_Value = null;
         lengthInput_Two.value = lengthInput_Two_Value;
     }
 
     //console.log(lengthSelect_Two_Value);
+});
+
+// event listeners for temp ui changes
+document.getElementById("fromTemp").addEventListener('change', function () {
+    tempInput_One_Value = this.value;
+    //console.log(tempInput_One_Value);
+});
+
+document.getElementById('toTemp').addEventListener('change', function () {
+    tempInput_Two_Value = this.value;
+    //console.log(tempInput_Two_Value);
+});
+
+document.getElementById('tempFrom').addEventListener('change', function () {
+    tempSelect_One_Value = this.value;
+
+    // reset results
+    if (tempInput_Two_Value != null) {
+        tempInput_Two_Value = null;
+        tempInput_Two.value = tempInput_Two_Value;
+    }
+
+    //console.log(tempSelect_One_Value);
+});
+
+document.getElementById('tempTo').addEventListener('change', function () {
+    tempSelect_Two_Value = this.value;
+
+    if (tempInput_Two_Value != null) {
+        tempInput_Two_Value = null;
+        tempInput_Two.value = tempInput_Two_Value;
+    }
+
+    //console.log(tempSelect_Two_Value);
 });
 
 // event listener for length button conversions
@@ -173,16 +221,81 @@ document.getElementById("lengthConvertBtn").addEventListener("click", function (
     }
 })
 
+// event listener for temp button conversions
+document.getElementById("tempConvertBtn").addEventListener("click", function () {
+
+    // checks if both inputs are greater than 0
+    if (tempInput_One_Value <= 0 && tempInput_Two_Value <= 0) {
+        console.log("temp input one and two are empty.");
+        return;
+    }
+
+    // checks if both selects have the same value
+    if (tempSelect_One_Value === tempSelect_Two_Value) {
+        if (tempInput_One_Value > 0) {
+            tempInput_Two_Value = tempInput_One_Value;
+            tempInput_Two.value = tempInput_Two_Value;
+            return;
+        }
+    }
+
+    // check if selects are different values
+    if (tempSelect_One_Value !== tempSelect_Two_Value) {
+
+        if (tempSelect_One_Value === "celsius") {
+            switch (tempSelect_Two_Value) {
+                case "kelvin":
+                    tempInput_Two_Value = CelsiusToKelvin(tempInput_One_Value);
+                    tempInput_Two.value = tempInput_Two_Value;
+                    //console.log("celsius");
+                    break;
+                case "fahrenheit":
+                    tempInput_Two_Value = CelsiusToFahrenheit(tempInput_One_Value);
+                    tempInput_Two.value = tempInput_Two_Value;
+                    //console.log("fahrenheit");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (tempSelect_One_Value === "kelvin") {
+            switch (tempSelect_Two_Value) {
+                case "celsius":
+                    tempInput_Two_Value = KelvinToCelsius(tempInput_One_Value);
+                    tempInput_Two.value = tempInput_Two_Value;
+                    //console.log("celsius");
+                    break;
+                case "fahrenheit":
+                    tempInput_Two_Value = KelvinToFahrenheit(tempInput_One_Value);
+                    tempInput_Two.value = tempInput_Two_Value;
+                    //console.log("fahrenheit");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (tempSelect_One_Value === "fahrenheit") {
+            switch (tempSelect_Two_Value) {
+                case "celsius":
+                    tempInput_Two_Value = FahrenheitToCelsius(tempInput_One_Value);
+                    tempInput_Two.value = tempInput_Two_Value;
+                    //console.log("celsius");
+                    break;
+                case "kelvin":
+                    tempInput_Two_Value = FahrenheitToKelvin(tempInput_One_Value);
+                    tempInput_Two.value = tempInput_Two_Value;
+                    //console.log("fahrenheit");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+})
 
 
-
-
-
-
-//let result = KilometersToMeters(2);
-//console.log(result);
-
-//console.log(lengthInput_One, lengthInput_Two, lengthSelect_One, lengthSelect_Two);
 
 
 

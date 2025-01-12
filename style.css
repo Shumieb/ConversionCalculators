@@ -103,7 +103,8 @@ main {
     padding: 2px 0px;
 }
 
-.length-section .length-main {
+.length-section .length-main,
+.temp-section .temp-main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -170,7 +171,8 @@ main {
     color: #023535;
 }
 
-#toLength {
+#toLength,
+#toTemp {
     background-color: burlywood;
 }
 
