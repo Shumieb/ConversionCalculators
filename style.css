@@ -104,7 +104,8 @@ main {
 }
 
 .length-section .length-main,
-.temp-section .temp-main {
+.temp-section .temp-main,
+.weight-section .weight-main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -172,7 +173,8 @@ main {
 }
 
 #toLength,
-#toTemp {
+#toTemp,
+#toWeight {
     background-color: burlywood;
 }
 

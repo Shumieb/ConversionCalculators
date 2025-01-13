@@ -128,27 +128,40 @@
                 <h2>Weight Conversions</h2>
             </div>
             <div class="weight-main">
-                <div class="weight-from">
-                    <p>From: </p>
-                    <input type="number" name="fromWeight" id="fromWeight" min="0">
-                    <select name="weightFrom" id="weightFrom">
-                        <option value="kilogram" selected>Kilogram</option>
-                        <option value="gram">Gram</option>
-                        <option value="miligram">Miligram</option>
-                        <option value="pound">Pound</option>
-                        <option value="ounce">Ounce</option>
-                    </select>
-                </div>
-                <div class="weight-to">
-                    <p>To:</p>
-                    <input type="number" name="toWeight" id="toWeight" min="0">
-                    <select name="weightTo" id="weightTo">
-                        <option value="kilogram">Kilogram</option>
-                        <option value="gram" selected>Gram</option>
-                        <option value="miligram">Miligram</option>
-                        <option value="pound">Pound</option>
-                        <option value="ounce">Ounce</option>
-                    </select>
+                <div class="selects">
+                    <div class="weight-from">
+                        <p>From: </p>
+                        <select name="weightFrom" id="weightFrom">
+                            <option value="kilogram" selected>Kilogram</option>
+                            <option value="gram">Gram</option>
+                            <option value="miligram">Miligram</option>
+                            <option value="pound">Pound</option>
+                            <option value="ounce">Ounce</option>
+                        </select>
+                        <div>
+                            <input type="number" name="fromWeight" id="fromWeight" min="0">
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <button class="btn" id="weightConvertBtn">
+                            <i class="material-icons">arrow_back</i>
+                            <span class="text">Convert</span>
+                            <i class="material-icons">arrow_forward</i>
+                        </button>
+                    </div>
+                    <div class="weight-to">
+                        <p>To: </p>
+                        <select name="weightTo" id="weightTo">
+                            <option value="kilogram">Kilogram</option>
+                            <option value="gram" selected>Gram</option>
+                            <option value="miligram">Miligram</option>
+                            <option value="pound">Pound</option>
+                            <option value="ounce">Ounce</option>
+                        </select>
+                        <div>
+                            <input type="number" name="toWeight" id="toWeight" min="0" disabled="true">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
