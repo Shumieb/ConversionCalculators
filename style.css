@@ -189,6 +189,24 @@ footer div p {
     padding: 6px;
 }
 
+#temp-heading hr {
+    max-width: 250px;
+}
+
+.about-main {
+    min-height: 80.8vh;
+}
+
+.about-sections {
+    font-size: 22px;
+    text-align: center;
+    background-color: #015958;
+    color: white;
+    padding: 6px 16px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -222,6 +240,10 @@ footer div p {
 
     .icons {
         margin: 22px auto;
+    }
+
+    #temp-heading hr {
+        max-width: 250px;
     }
 }
 
@@ -263,6 +285,10 @@ footer div p {
     .sections .section-heading hr {
         max-width: 200px;
     }
+
+    #temp-heading hr {
+        max-width: 250px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -292,6 +318,9 @@ footer div p {
         margin: auto;
     }
 
+    #temp-heading hr {
+        max-width: 250px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -307,6 +336,10 @@ footer div p {
     main {
         max-width: 80%;
         margin: auto;
+    }
+
+    #temp-heading hr {
+        max-width: 250px;
     }
 }
 
