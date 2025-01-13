@@ -132,17 +132,34 @@ export const MiligramsToOunce = (miligrams) => {
 
 // pounds conversions
 export const PoundsToKilograms = (pounds) => {
-    return;
+    return pounds / 2.205;
 }
 
 export const PoundsToGrams = (pounds) => {
-    return;
+    return pounds * 453.592;
 }
 
 export const PoundsToMiligrams = (pounds) => {
-    return;
+    return pounds * 453592;
 }
 
 export const PoundsToOunce = (pounds) => {
-    return;
+    return pounds * 16;
+}
+
+// ounce conversions
+export const OunceToKilograms = (ounce) => {
+    return ounce / 35.274;
+}
+
+export const OunceToGrams = (ounce) => {
+    return ounce * 28.35;
+}
+
+export const OunceToMiligrams = (ounce) => {
+    return ounce * 28350;
+}
+
+export const OunceToPounds = (ounce) => {
+    return ounce / 16;
 }
