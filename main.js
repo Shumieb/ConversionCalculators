@@ -16,7 +16,27 @@ import {
     KelvinToCelsius,
     KelvinToFahrenheit,
     FahrenheitToCelsius,
-    FahrenheitToKelvin
+    FahrenheitToKelvin,
+    KilogramsToGrams,
+    KilogramsToMiligrams,
+    KilogramsToPounds,
+    KilogramsToOunce,
+    GramsToKilograms,
+    GramsToMiligrams,
+    GramsToPounds,
+    GramsToOunce,
+    MiligramsToKilograms,
+    MiligramsToGrams,
+    MiligramsToPounds,
+    MiligramsToOunce,
+    PoundsToKilograms,
+    PoundsToGrams,
+    PoundsToMiligrams,
+    PoundsToOunce,
+    OunceToKilograms,
+    OunceToGrams,
+    OunceToMiligrams,
+    OunceToPounds
 } from "./utils.js"
 
 // references to HTML
@@ -123,12 +143,12 @@ document.getElementById('tempTo').addEventListener('change', function () {
 // event listeners for weight ui changes
 document.getElementById("fromWeight").addEventListener('change', function () {
     weightInput_One_Value = this.value;
-    console.log(weightInput_One_Value);
+    //console.log(weightInput_One_Value);
 });
 
 document.getElementById('toWeight').addEventListener('change', function () {
     weightInput_Two_Value = this.value;
-    console.log(weightInput_Two_Value);
+    //console.log(weightInput_Two_Value);
 });
 
 document.getElementById('weightFrom').addEventListener('change', function () {
@@ -140,7 +160,7 @@ document.getElementById('weightFrom').addEventListener('change', function () {
         weightInput_Two.value = weightInput_Two_Value;
     }
 
-    console.log(weightSelect_One_Value);
+    //console.log(weightSelect_One_Value);
 });
 
 document.getElementById('weightTo').addEventListener('change', function () {
@@ -151,7 +171,7 @@ document.getElementById('weightTo').addEventListener('change', function () {
         weightInput_Two.value = weightInput_Two_Value;
     }
 
-    console.log(weightSelect_Two_Value);
+    //console.log(weightSelect_Two_Value);
 });
 
 // event listener for length button conversions
@@ -331,6 +351,164 @@ document.getElementById("tempConvertBtn").addEventListener("click", function () 
                     tempInput_Two_Value = FahrenheitToKelvin(tempInput_One_Value);
                     tempInput_Two.value = tempInput_Two_Value;
                     //console.log("fahrenheit");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+})
+
+// event listener for temp button conversions
+document.getElementById("weightConvertBtn").addEventListener("click", function () {
+
+    // checks if both inputs are greater than 0
+    if (weightInput_One_Value <= 0 && weightInput_Two_Value <= 0) {
+        console.log("weight input one and two are empty.");
+        return;
+    }
+
+    // checks if both selects have the same value
+    if (weightSelect_One_Value === weightSelect_Two_Value) {
+        if (weightInput_One_Value > 0) {
+            weightInput_Two_Value = weightInput_One_Value;
+            weightInput_Two.value = weightInput_Two_Value;
+            return;
+        }
+    }
+
+    // check if selects are different values
+    if (weightSelect_One_Value !== weightSelect_Two_Value) {
+
+        if (weightSelect_One_Value === "kilogram") {
+            switch (weightSelect_Two_Value) {
+                case "gram":
+                    weightInput_Two_Value = KilogramsToGrams(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("grams");
+                    break;
+                case "miligram":
+                    weightInput_Two_Value = KilogramsToMiligrams(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("miligrams");
+                    break;
+                case "pound":
+                    weightInput_Two_Value = KilogramsToPounds(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("pound");
+                    break;
+                case "ounce":
+                    weightInput_Two_Value = KilogramsToOunce(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("ounce");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (weightSelect_One_Value === "gram") {
+            switch (weightSelect_Two_Value) {
+                case "kilogram":
+                    weightInput_Two_Value = GramsToKilograms(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("kilograms");
+                    break;
+                case "miligram":
+                    weightInput_Two_Value = GramsToMiligrams(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("miligrams");
+                    break;
+                case "pound":
+                    weightInput_Two_Value = GramsToPounds(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("pound");
+                    break;
+                case "ounce":
+                    weightInput_Two_Value = GramsToOunce(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("ounce");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (weightSelect_One_Value === "miligram") {
+            switch (weightSelect_Two_Value) {
+                case "kilogram":
+                    weightInput_Two_Value = MiligramsToKilograms(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("kilograms");
+                    break;
+                case "gram":
+                    weightInput_Two_Value = MiligramsToGrams(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("grams");
+                    break;
+                case "pound":
+                    weightInput_Two_Value = MiligramsToPounds(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("pound");
+                    break;
+                case "ounce":
+                    weightInput_Two_Value = MiligramsToOunce(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("ounce");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (weightSelect_One_Value === "pound") {
+            switch (weightSelect_Two_Value) {
+                case "kilogram":
+                    weightInput_Two_Value = PoundsToKilograms(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("kilograms");
+                    break;
+                case "gram":
+                    weightInput_Two_Value = PoundsToGrams(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("grams");
+                    break;
+                case "miligram":
+                    weightInput_Two_Value = PoundsToMiligrams(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("pound");
+                    break;
+                case "ounce":
+                    weightInput_Two_Value = PoundsToOunce(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("ounce");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        if (weightSelect_One_Value === "ounce") {
+            switch (weightSelect_Two_Value) {
+                case "kilogram":
+                    weightInput_Two_Value = OunceToKilograms(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("kilograms");
+                    break;
+                case "gram":
+                    weightInput_Two_Value = OunceToGrams(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("grams");
+                    break;
+                case "miligram":
+                    weightInput_Two_Value = OunceToMiligrams(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("pound");
+                    break;
+                case "pound":
+                    weightInput_Two_Value = OunceToPounds(weightInput_One_Value);
+                    weightInput_Two.value = weightInput_Two_Value;
+                    console.log("pound");
                     break;
                 default:
                     break;
