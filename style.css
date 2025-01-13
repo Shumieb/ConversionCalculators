@@ -101,7 +101,7 @@ main {
 .sections .section-heading hr {
     border: 2px solid white;
     margin: 0px auto;
-    max-width: 60%;
+    max-width: 250px;
     border-radius: 2px;
 }
 
@@ -261,7 +261,7 @@ footer div p {
     }
 
     .sections .section-heading hr {
-        max-width: 50%;
+        max-width: 200px;
     }
 }
 
@@ -276,7 +276,7 @@ footer div p {
     }
 
     .sections .section-heading hr {
-        max-width: 35%;
+        max-width: 200px;
     }
 
     .selects {
