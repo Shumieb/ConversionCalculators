@@ -39,21 +39,22 @@
         <h1 class="page-header">Conversion Calculators</h1>
 
         <!-----------------------------------Length Conversion--------------------------------------->
-        <section class="length-section">
-            <div class="length-heading">
+        <section class="sections">
+            <div class="section-heading">
                 <h2>Length Conversions</h2>
+                <hr>
             </div>
-            <div class="length-main">
+            <div class="section-main">
                 <div class="selects">
                     <div class="length-from">
                         <p>From: </p>
-                        <select name="lengthFrom" id="lengthFrom">
+                        <select name="lengthFrom" id="lengthFrom" class="section-select">
                             <option value="km" selected>Kilometer</option>
                             <option value="m">Meter</option>
                             <option value="cm">Centimenter</option>
                             <option value="mm">Milimenter</option>
                         </select>
-                        <div>
+                        <div class="section-inputs">
                             <input type="number" name="fromLength" id="fromLength" min="0">
                         </div>
                     </div>
@@ -66,14 +67,15 @@
                     </div>
                     <div class="length-to">
                         <p>To: </p>
-                        <select name="lengthTo" id="lengthTo">
+                        <select name="lengthTo" id="lengthTo" class="section-select">
                             <option value="km">Kilometer</option>
                             <option value="m" selected>Meter</option>
                             <option value="cm">Centimenter</option>
                             <option value="mm">Milimenter</option>
                         </select>
-                        <div>
-                            <input type="number" name="toLength" id="toLength" disabled="true" min="0">
+                        <div class="section-inputs">
+                            <input type="number" name="toLength" id="toLength" disabled="true" min="0"
+                                class="to-inputs">
                         </div>
                     </div>
                 </div>
@@ -82,20 +84,21 @@
         <!-----------------------------------Length Conversion--------------------------------------->
 
         <!-----------------------------------Temperature Conversion--------------------------------------->
-        <section class="temp-section">
-            <div class="temp-heading">
+        <section class="sections">
+            <div class="section-heading">
                 <h2>Temperature Conversions</h2>
+                <hr>
             </div>
-            <div class="temp-main">
+            <div class="section-main">
                 <div class="selects">
                     <div class="temp-from">
                         <p>From: </p>
-                        <select name="tempFrom" id="tempFrom">
+                        <select name="tempFrom" id="tempFrom" class="section-select">
                             <option value="celsius" selected>Celsius</option>
                             <option value="kelvin">Kelvin</option>
                             <option value="fahrenheit">Fahrenheit</option>
                         </select>
-                        <div>
+                        <div class="section-inputs">
                             <input type="number" name="fromTemp" id="fromTemp" min="0">
                         </div>
                     </div>
@@ -108,13 +111,13 @@
                     </div>
                     <div class="temp-to">
                         <p>To: </p>
-                        <select name="tempTo" id="tempTo">
+                        <select name="tempTo" id="tempTo" class="section-select">
                             <option value="celsius">Celsius</option>
                             <option value="kelvin" selected>Kelvin</option>
                             <option value="fahrenheit">Fahrenheit</option>
                         </select>
-                        <div>
-                            <input type="number" name="toTemp" id="toTemp" min="0" disabled="true">
+                        <div class="section-inputs">
+                            <input type="number" name="toTemp" id="toTemp" min="0" disabled="true" class="to-inputs">
                         </div>
                     </div>
                 </div>
@@ -123,22 +126,23 @@
         <!-----------------------------------Temperature Conversion--------------------------------------->
 
         <!-----------------------------------Weight Conversion--------------------------------------->
-        <section class="weight-section">
-            <div class="weight-heading">
+        <section class="sections">
+            <div class="section-heading">
                 <h2>Weight Conversions</h2>
+                <hr>
             </div>
-            <div class="weight-main">
+            <div class="section-main">
                 <div class="selects">
                     <div class="weight-from">
                         <p>From: </p>
-                        <select name="weightFrom" id="weightFrom">
+                        <select name="weightFrom" id="weightFrom" class="section-select">
                             <option value="kilogram" selected>Kilogram</option>
                             <option value="gram">Gram</option>
                             <option value="miligram">Miligram</option>
                             <option value="pound">Pound</option>
                             <option value="ounce">Ounce</option>
                         </select>
-                        <div>
+                        <div class="section-inputs">
                             <input type="number" name="fromWeight" id="fromWeight" min="0">
                         </div>
                     </div>
@@ -151,15 +155,16 @@
                     </div>
                     <div class="weight-to">
                         <p>To: </p>
-                        <select name="weightTo" id="weightTo">
+                        <select name="weightTo" id="weightTo" class="section-select">
                             <option value="kilogram">Kilogram</option>
                             <option value="gram" selected>Gram</option>
                             <option value="miligram">Miligram</option>
                             <option value="pound">Pound</option>
                             <option value="ounce">Ounce</option>
                         </select>
-                        <div>
-                            <input type="number" name="toWeight" id="toWeight" min="0" disabled="true">
+                        <div class="section-inputs">
+                            <input type="number" name="toWeight" id="toWeight" min="0" disabled="true"
+                                class="to-inputs">
                         </div>
                     </div>
                 </div>

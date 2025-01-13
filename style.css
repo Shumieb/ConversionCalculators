@@ -79,9 +79,7 @@ main {
     color: #023535;
 }
 
-.length-section,
-.temp-section,
-.weight-section {
+.sections {
     background-color: #015958;
     padding: 6px 16px 30px 6px;
     border-radius: 5px;
@@ -89,26 +87,25 @@ main {
     color: white;
 }
 
-.length-section .length-heading,
-.temp-section .temp-heading,
-.weight-section .weight-heading {
+.section-heading {
     max-width: 90%;
-    margin: auto;
+    margin: 0px auto 18px auto;
 }
 
-.length-section .length-heading h2,
-.temp-section .temp-heading h2,
-.weight-section .weight-heading h2 {
+.sections .section-heading h2 {
     font-weight: normal;
     padding: 2px 0px;
+    margin: 15px auto 0px auto;
 }
 
-.length-section .length-main,
-.temp-section .temp-main,
-.weight-section .weight-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.sections .section-heading hr {
+    border: 2px solid white;
+    margin: 0px auto;
+    max-width: 60%;
+    border-radius: 2px;
+}
+
+.sections .section-main {
     font-size: 22px;
     padding: 2px 0px;
     max-width: 90%;
@@ -158,12 +155,7 @@ main {
     color: #015958;
 }
 
-.length-section .length-main .length-from input,
-.length-section .length-main .length-to input,
-.temp-section .temp-main .temp-from input,
-.temp-section .temp-main .temp-to input,
-.weight-section .weight-main .weight-from input,
-.weight-section .weight-main .weight-to input {
+.section-inputs input {
     padding: 3px;
     outline: none;
     border: 1px solid #023535;
@@ -172,18 +164,11 @@ main {
     color: #023535;
 }
 
-#toLength,
-#toTemp,
-#toWeight {
+.to-inputs {
     background-color: burlywood;
 }
 
-.length-section .length-main .length-from select,
-.length-section .length-main .length-to select,
-.temp-section .temp-main .temp-from select,
-.temp-section .temp-main .temp-to select,
-.weight-section .weight-main .weight-from select,
-.weight-section .weight-main .weight-to select {
+.section-select {
     padding: 3px 6px;
     outline: none;
     border: 1px solid #023535;
@@ -203,3 +188,127 @@ footer div p {
     margin: 0px 8px;
     padding: 6px;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    header nav,
+    footer div {
+        max-width: 100%;
+        margin: auto;
+        padding: 4px 12px;
+    }
+
+    main {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .sections {
+        min-height: 300px;
+    }
+
+    .sections .section-heading h2 {
+        text-align: center;
+    }
+
+    .sections .section-heading hr {
+        display: block;
+    }
+
+    .selects {
+        flex-direction: column;
+    }
+
+    .icons {
+        margin: 22px auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    header nav,
+    footer div {
+        max-width: 100%;
+        margin: auto;
+        padding: 4px 12px;
+    }
+
+    main {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .sections {
+        min-height: 300px;
+    }
+
+    .sections .section-heading h2 {
+        text-align: center;
+    }
+
+    .sections .section-heading hr {
+        display: block;
+    }
+
+    .selects {
+        flex-direction: column;
+    }
+
+    .icons {
+        margin: 22px auto;
+    }
+
+    .sections .section-heading hr {
+        max-width: 50%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    header nav,
+    footer div {
+        max-width: 90%;
+        margin: auto;
+        padding: 4px 12px;
+    }
+
+    .sections .section-heading hr {
+        max-width: 35%;
+    }
+
+    .selects {
+        flex-direction: row;
+    }
+
+    .sections {
+        min-height: 180px;
+    }
+
+    main {
+        max-width: 90%;
+        margin: auto;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    header nav,
+    footer div {
+        max-width: 80%;
+        margin: auto;
+        padding: 4px 12px;
+    }
+
+    main {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
