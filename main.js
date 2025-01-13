@@ -30,6 +30,11 @@ const tempInput_Two = document.getElementById("toTemp");
 const tempSelect_One = document.getElementById("tempFrom");
 const tempSelect_Two = document.getElementById("tempTo");
 
+const weightInput_One = document.getElementById("fromWeight");
+const weightInput_Two = document.getElementById("toWeight");
+const weightSelect_One = document.getElementById("weightFrom");
+const weightSelect_Two = document.getElementById("weightTo");
+
 
 // global variables
 let lengthInput_One_Value = 0;
@@ -41,6 +46,11 @@ let tempInput_One_Value = 0;
 let tempInput_Two_Value = 0;
 let tempSelect_One_Value = "celsius";
 let tempSelect_Two_Value = "kelvin";
+
+let weightInput_One_Value = 0;
+let weightInput_Two_Value = 0;
+let weightSelect_One_Value = "kilogram";
+let weightSelect_Two_Value = "gram";
 
 // event listeners for length ui changes
 document.getElementById('fromLength').addEventListener('change', function () {
@@ -108,6 +118,40 @@ document.getElementById('tempTo').addEventListener('change', function () {
     }
 
     //console.log(tempSelect_Two_Value);
+});
+
+// event listeners for weight ui changes
+document.getElementById("fromWeight").addEventListener('change', function () {
+    weightInput_One_Value = this.value;
+    console.log(weightInput_One_Value);
+});
+
+document.getElementById('toWeight').addEventListener('change', function () {
+    weightInput_Two_Value = this.value;
+    console.log(weightInput_Two_Value);
+});
+
+document.getElementById('weightFrom').addEventListener('change', function () {
+    weightSelect_One_Value = this.value;
+
+    // reset results
+    if (weightInput_Two_Value != null) {
+        weightInput_Two_Value = null;
+        weightInput_Two.value = weightInput_Two_Value;
+    }
+
+    console.log(weightSelect_One_Value);
+});
+
+document.getElementById('weightTo').addEventListener('change', function () {
+    weightSelect_Two_Value = this.value;
+
+    if (weightInput_Two_Value != null) {
+        weightInput_Two_Value = null;
+        weightInput_Two.value = weightInput_Two_Value;
+    }
+
+    console.log(weightSelect_Two_Value);
 });
 
 // event listener for length button conversions
