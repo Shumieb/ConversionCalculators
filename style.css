@@ -67,6 +67,7 @@ header nav div ul li a:hover {
 
 main {
     max-width: 80%;
+    min-height: 80vh;
     margin: auto;
 }
 
@@ -81,7 +82,7 @@ main {
 
 .sections {
     background-color: #015958;
-    padding: 6px 16px 30px 6px;
+    padding: 4px 30px;
     border-radius: 5px;
     margin-bottom: 50px;
     color: white;
@@ -162,6 +163,8 @@ main {
     border-radius: 4px;
     font-size: 18px;
     color: #023535;
+    max-width: 75%;
+
 }
 
 .to-inputs {
